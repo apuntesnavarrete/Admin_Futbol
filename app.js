@@ -7,6 +7,10 @@ var logger = require('morgan');
 var indexRouter = require('./routes/index');
 var edfRouter = require('./routes/edf');
 var edmRouter = require('./routes/edm');
+var edlibreRouter = require('./routes/edlibre');
+var gemmixRouter = require('./routes/gemmix');
+var gemjuveRouter = require('./routes/gemjuve');
+var gemsubRouter = require('./routes/gemsub');
 
 var app = express();
 
@@ -23,6 +27,11 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', indexRouter);
 app.use('/ed/femenil', edfRouter);
 app.use('/ed/mixta', edmRouter);
+app.use('/ed/libre', edlibreRouter);
+app.use('/gem/mix', gemmixRouter);
+app.use('/gem/juve', gemjuveRouter);
+app.use('/gem/sub', gemsubRouter);
+
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
