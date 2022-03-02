@@ -5,7 +5,7 @@ const pool = require('../database');
 /* GET users listing. */
 /* GET home page. */
 router.get('/', async (req, res, next) => {
-  const vistas = await pool.query("SELECT * FROM `ed_general_libre_a22`");
+  const vistas = await pool.query("SELECT * FROM `G_general_sub19_a22`");
 
 console.log(vistas)
 let categoria = "libre";
