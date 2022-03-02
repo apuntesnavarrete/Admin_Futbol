@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+
+  </head>
+  <body>
+    
+    <%- categoria %>
+<%- plantel_1[0].Equipo %>
+<%- plantel_2[0].Equipo %>
+
+    <form action="/ed/<%- categoria %>/act<%- categoria %>" method="POST">
+   <input type="number" name="Jornada" value="" placeholder="Jornada">
+  
+  <input type="date" name="Fecha" value="" placeholder="Fecha">
+
+      <br>
+      <br>
+<label for="Equipo"><%- plantel_1[0].Nombre_Equipo %></label>
+      <input type="text" name="Equipo" value="<%- plantel_1[0].Equipo %>" placeholder="<%- plantel_1[0].Equipo %>">
+      <input type="number" name="GF" value="" placeholder="GF" class="col-md-1">
+
+      <input type="number" name="Puntos" value="" placeholder="pl" class="col-md-1">
+      <input type="number" name="Puntos_2" value="" placeholder="pv" class="col-md-1">
+
+
+      <input type="text" name="GC" value="" placeholder="GC" class="col-md-1">
+      <input type="text" name="Equipo_2" value="<%- plantel_2[0].Equipo %>" placeholder="Equipo_2">
+      <label for="Equipo_2"><%- plantel_2[0].Nombre_Equipo %></label>
+
+      <br>
+      <h3>Jugadores <%- plantel_1[0].Nombre_Equipo %></h3>
+
+        <div class="row">
+
+<!-- Inicio columna Equipo_1 -->
+          <div class="col">
+            <!-- Inicio jugador_1 -->
+            <% for(var i=0 ; i < plantel_1.length; i++) { %>
+
+
+      <input type="range" min="0" max="1" name="PJ" value="1" class="col-md-1" >
+      <input type="number" name="Goles" value="0" class="col-md-1">
+      <input type="text" name="nombre" value=" <%- plantel_1[i].Nombres %> ">
+      <input type="number" name="id" value="<%- plantel_1[i].ID_FB %>" class="col-md-2">
+
+      <br>
+
+      <% } %>
+    </div>
+
+            <!-- Fin jugador_1 -->
+
+      
+
+
+<!-- Inicio columna Equipo_2 -->
+
+        <div class="col">
+
+          <h3>Jugadores <%- plantel_2[0].Nombre_Equipo %></h3>
+
+          <% for(var i=0 ; i < plantel_2.length; i++) { %>
+
+            <input type="range" min="0" max="1" name="PJ_2" value="1" class="col-md-1" >
+            <input type="number" name="Goles_2" value="0" class="col-md-1">
+          <input type="text" name="nombre_2" value=" <%- plantel_2[i].Nombres %> ">
+          <input type="number" name="id_2" value="<%- plantel_2[i].ID_FB %>" class="col-md-2">
+          <br>
+
+          <% } %>
+
+            </div>
+
+       </div>
+
+      
+      <button>Enviar</button>
+      </form>
+      
+  </body>
+</html>
