@@ -28,9 +28,9 @@ app.use('/', indexRouter);
 app.use('/ed/femenil', edfRouter);
 app.use('/ed/mixta', edmRouter);
 app.use('/ed/libre', edlibreRouter);
-app.use('/gem/mix', gemmixRouter);
-app.use('/gem/juve', gemjuveRouter);
-app.use('/gem/sub', gemsubRouter);
+app.use('/ed/gmix', gemmixRouter);
+app.use('/ed/gjuve', gemjuveRouter);
+app.use('/ed/gsub', gemsubRouter);
 
 
 // catch 404 and forward to error handler
