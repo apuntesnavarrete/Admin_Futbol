@@ -11,6 +11,11 @@ var edlibreRouter = require('./routes/edlibre');
 var gemmixRouter = require('./routes/gemmix');
 var gemjuveRouter = require('./routes/gemjuve');
 var gemsubRouter = require('./routes/gemsub');
+var psubRouter = require('./routes/psub');
+var plibreRouter = require('./routes/plibre');
+var pfRouter = require('./routes/pf');
+var pmixRouter = require('./routes/pmix');
+
 
 var app = express();
 
@@ -31,6 +36,10 @@ app.use('/ed/libre', edlibreRouter);
 app.use('/ed/gmix', gemmixRouter);
 app.use('/ed/gjuve', gemjuveRouter);
 app.use('/ed/gsub', gemsubRouter);
+app.use('/ed/plibre', plibreRouter);
+app.use('/ed/pmix', pmixRouter);
+app.use('/ed/psub', psubRouter);
+app.use('/ed/pfemenil', pfRouter);
 
 
 // catch 404 and forward to error handler
