@@ -12,25 +12,30 @@
     <title>Document</title>
 </head>
 <body>
+
+    <%- categoria %>
+
+    <% for(var i=0 ; i < resul.length; i++) { %>
+
     <div class="content_resul">
-        <p class="fecha">7-03-2022</p>
-        <p class="Cat">Categoria Femenil</p>
-        <p class="Jor">Semana 7</p>
+        <p class="fecha"><%- resul[i].Fecha %></p>
+        <p class="Cat">Categoria <%- categoria %></p>
+        <p class="Jor">Semana <%- resul[i].Jornada %></p>
         <div class="equipo_1">
-            <img class="equipos" src="/escudos/ajax.png" alt="">
+            <img class="equipos" src="<%- resul[i].Escudo %>" alt="">
         </div> 
         <p class="versus"></p>
         <div class="Equipo_2">
-            <img class="equipos" src="/escudos/alemania.png" alt="">
+            <img class="equipos" src="<%- resul[i].Escudolc %>" alt="">
         </div>       
-        <p class="marcador">2-2</p>
+        <p class="marcador"><%- resul[i].GF %>-<%- resul[i].GC %></p>
         <p class="Logo">
-            <img class="logo-img" src="/images/logochampions.png" alt="">
+            <img class="logo-img" src="/images/<%- logo_liga %>" alt="">
         </p>
-        <p class="liga">Pro Champions League</p>
+        <p class="liga"><%- Liga %></p>
     </div>
+    <% } %>
 
-    <%- resul %>
 
     <p>Resultados Libre vista</p>
 </body>
