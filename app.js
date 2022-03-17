@@ -15,7 +15,8 @@ var psubRouter = require('./routes/psub');
 var plibreRouter = require('./routes/plibre');
 var pfRouter = require('./routes/pf');
 var pmixRouter = require('./routes/pmix');
-var resulplibre = require('./routes/resul/plibre')
+var resulpro = require('./routes/resul/pro')
+var resuled = require('./routes/resul/ed')
 
 var app = express();
 
@@ -40,7 +41,8 @@ app.use('/ed/plibre', plibreRouter);
 app.use('/ed/pmix', pmixRouter);
 app.use('/ed/psub', psubRouter);
 app.use('/ed/pfemenil', pfRouter);
-app.use('/resul/plibre',resulplibre)
+app.use('/resul/pro',resulpro)
+app.use('/resul/ed',resuled)
 
 
 // catch 404 and forward to error handler
