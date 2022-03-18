@@ -38,9 +38,18 @@
 <script>
     window.onload=inicio;
     function inicio(){
-        document.getElementsByClassName("content_resul")[0].style.backgroundImage = '<%- fondo %>';
-        document.getElementsByClassName("content_resul")[0].style.borderColor = '<%- color %>';
-        document.getElementsByClassName("content_resul")[0].style.color = '<%- color %>';
+
+
+        
+
+        for (let i = 0; i < 30; i++) {
+         document.getElementsByClassName("content_resul")[i].style.borderColor = '<%- color %>';
+         document.getElementsByClassName("content_resul")[i].style.color = '<%- color %>';
+         document.getElementsByClassName("content_resul")[i].style.backgroundImage = '<%- fondo %>';
+
+        }
+
+
 
     }
 </script>

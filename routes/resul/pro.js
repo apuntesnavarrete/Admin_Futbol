@@ -45,7 +45,7 @@ router.get('/mixto', async (req, res, next) => {
     let Liga = "Pro Champions League"
     let logo_liga = "logochampions.png"
     let fondo = 'url("/images/fondochampions.jpg")';
-    let color = 'rgb(177 141 241)'
+    let color = 'rgb(213 189 255)'
 
     res.render('resul/resul', {resul,categoria,Liga,logo_liga,fondo,color});
 });
