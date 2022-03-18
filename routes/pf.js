@@ -137,7 +137,7 @@ await pool.query("INSERT INTO Pro_femenil_a22 set ?",[Resul_2])
 //Insertar tabla general
 
 
-res.redirect('/')
+res.redirect('http://localhost:8081/resul/pro/femenil')
 })
 
 module.exports = router;

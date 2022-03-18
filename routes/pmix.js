@@ -6,10 +6,10 @@ const pool = require('../database');
 /* GET users listing. */
 /* GET home page. */
 router.get('/', async (req, res, next) => {
-  const vistas = await pool.query("SELECT * FROM `G_general_I21`");
+  const vistas = await pool.query("SELECT * FROM `Pro_general_a22`");
 
 console.log(vistas)
-let categoria = "gsub";
+let categoria = "pmix";
 console.log(categoria)
 
   res.render('index', {vistas:vistas,categoria});
@@ -17,13 +17,13 @@ console.log(categoria)
 });
 
 router.post('/', async (req, res, next) => {
-  let categoria = "gsub";
+  let categoria = "pmix";
   var {equipo} = req.body
   var {equipo_2} = req.body
 console.log(equipo)
 console.log(equipo_2)
-const plantel_1 = await pool.query("SELECT * FROM `G_general_I21` WHERE Equipo = ?",[equipo]);
-const plantel_2 = await pool.query("SELECT * FROM `G_general_I21` WHERE Equipo = ?",[equipo_2]);
+const plantel_1 = await pool.query("SELECT * FROM `Pro_general_a22` WHERE Equipo = ?",[equipo]);
+const plantel_2 = await pool.query("SELECT * FROM `Pro_general_a22` WHERE Equipo = ?",[equipo_2]);
 
 // const plantel_1 = await pool.query("Select * From `ed_planteles_libre_a22` WHERE Nombre_Equipo = ?" , [equipo])
 // const plantel_2 = await pool.query("Select * From `ed_planteles_libre_a22` WHERE Nombre_Equipo = ?" , [equipo_2])
@@ -34,7 +34,7 @@ const plantel_2 = await pool.query("SELECT * FROM `G_general_I21` WHERE Equipo =
   res.render('gpost', {categoria,equipo,equipo_2,plantel_1,plantel_2});
 });
 
-router.post('/actgsub' , async (req,res,next)=>{
+router.post('/actpmix' , async (req,res,next)=>{
 // let {id,Goles,PJ} = req.body;
 // let {id_2,Goles_2,PJ_2} = req.body;
 let {Equipo,Equipo_2,GF,GC,Jornada,Fecha,Puntos,Puntos_2} = req.body;
@@ -130,8 +130,8 @@ console.log(Resul_1)
 // await pool.query("INSERT INTO Goleo_ED_feme_c21 set ?",[jugador2_13])
 // await pool.query("INSERT INTO Goleo_ED_feme_c21 set ?",[jugador2_14])
 //Termina Insertar goles y partidos de jugadores
-await pool.query("INSERT INTO G_Sub21_I21 set ?",[Resul_1])
-await pool.query("INSERT INTO G_Sub21_I21 set ?",[Resul_2])
+await pool.query("INSERT INTO Pro_mixto_a22 set ?",[Resul_1])
+await pool.query("INSERT INTO Pro_mixto_a22 set ?",[Resul_2])
 
 
 

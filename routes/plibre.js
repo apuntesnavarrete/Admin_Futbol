@@ -23,7 +23,6 @@ console.log(equipo)
 console.log(equipo_2)
 const plantel_1 = await pool.query("SELECT * FROM `PRO_general_libre_c21` WHERE Equipo = ?",[equipo]);
 const plantel_2 = await pool.query("SELECT * FROM `PRO_general_libre_c21` WHERE Equipo = ?",[equipo_2]);
-
 // const plantel_1 = await pool.query("Select * From `ed_planteles_libre_a22` WHERE Nombre_Equipo = ?" , [equipo])
 // const plantel_2 = await pool.query("Select * From `ed_planteles_libre_a22` WHERE Nombre_Equipo = ?" , [equipo_2])
 
@@ -137,7 +136,7 @@ await pool.query("INSERT INTO Pro_Libre_c21 set ?",[Resul_2])
 //Insertar tabla general
 
 
-res.redirect('/')
+res.redirect('http://localhost:8081/resul/pro/libre')
 })
 
 module.exports = router;

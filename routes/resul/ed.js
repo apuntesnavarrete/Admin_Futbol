@@ -9,7 +9,9 @@ router.get('/libre', async (req, res, next) => {
     let categoria = "Libre"
     let Liga = "Liga ED"
     let logo_liga = "logochampions.png"
-    res.render('resul/resul', {resul,categoria,Liga,logo_liga});
+    let fondo = 'url("/images/fondoligaed.png")';
+    let color = 'rgb(76, 175, 80)'
+    res.render('resul/resul', {resul,categoria,Liga,logo_liga,fondo,color});
 });
 
 router.get('/femenil', async (req, res, next) => {

@@ -1,5 +1,4 @@
 body{
-  color: #cfd1e2;
   font-size: 1.5rem;
   font-weight: bold;
   font-family: 'Fredoka', sans-serif;
@@ -7,15 +6,19 @@ body{
 }
 
 .content_resul{
+  color: #cfd1e2;
+
     width: 500px;
     height: 320px;
     background-image: url("/images/fondochampions.jpg");
     display: grid;
     grid-template-columns: repeat(10, 50px);
     grid-template-rows: repeat(6, 50px);
-   border: 10px double #747373; 
+    border-width: 10px;
+    border-style: double;
+    border-color: #747373;
    /* border-radius: 3px; */
-   margin: 5px;
+    margin: 5px;
 }
 .fecha {
     grid-column: 1 / 4;
@@ -92,6 +95,7 @@ body{
     align-self: center;
     justify-self: center;
     font-size: 2rem;
+
   }
 
   

@@ -12,7 +12,7 @@
     <title>Document</title>
 </head>
 <body>
-
+    
     <% for(var i=0 ; i < resul.length; i++) { %>
 
     <div class="content_resul">
@@ -26,15 +26,24 @@
         <div class="Equipo_2">
             <img class="equipos" src="<%- resul[i].Escudolc %>" alt="">
         </div>       
-        <p class="marcador"><%- resul[i].GF %>-<%- resul[i].GC %></p>
+        <p class="marcador"><%- resul[i].GC %>-<%- resul[i].GF %></p>
         <p class="Logo">
             <img class="logo-img" src="/images/<%- logo_liga %>" alt="">
         </p>
         <p class="liga"><%- Liga %></p>
     </div>
     <% } %>
+    <%- fondo %>
 
+<script>
+    window.onload=inicio;
+    function inicio(){
+        document.getElementsByClassName("content_resul")[0].style.backgroundImage = '<%- fondo %>';
+        document.getElementsByClassName("content_resul")[0].style.borderColor = '<%- color %>';
+        document.getElementsByClassName("content_resul")[0].style.color = '<%- color %>';
 
+    }
+</script>
     <p>Resultados Libre vista</p>
 </body>
 </html>
