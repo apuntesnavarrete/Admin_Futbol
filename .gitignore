@@ -1,6 +1,10 @@
 keys.js
+/keys.js
 *.png
 *.jpge
 *.jpg
 *.ico
-node_modules
+/node_modules/
+/public/imagenes/
+public/img/
+/prueba/
