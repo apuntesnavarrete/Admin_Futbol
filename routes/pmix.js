@@ -138,7 +138,7 @@ await pool.query("INSERT INTO Pro_mixto_a22 set ?",[Resul_2])
 //Insertar tabla general
 
 
-res.redirect('/')
+res.redirect('http://localhost:8081/resul/pro/mixto')
 })
 
 module.exports = router;
