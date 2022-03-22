@@ -11,8 +11,9 @@ router.get('/libre', async (req, res, next) => {
     let logo_liga = "logochampions.png"
     let fondo = 'url("/images/fondochampions.jpg")';
     let color = 'rgb(197 245 141)'
+    let jornada = "Semana"
 
-    res.render('resul/resul', {resul,categoria,Liga,logo_liga,fondo,color});
+    res.render('resul/resul', {resul,categoria,Liga,logo_liga,fondo,color,jornada});
 });
 
 router.get('/femenil', async (req, res, next) => {
@@ -23,8 +24,9 @@ router.get('/femenil', async (req, res, next) => {
     let logo_liga = "logochampions.png"
     let fondo = 'url("/images/fondochampions.jpg")';
     let color = 'rgb(223 114 199)'
+    let jornada = "Semana"
 
-    res.render('resul/resul', {resul,categoria,Liga,logo_liga,fondo,color});
+    res.render('resul/resul', {resul,categoria,Liga,logo_liga,fondo,color,jornada});
 });
 router.get('/sub21', async (req, res, next) => {
     const resul = await pool.query("SELECT * FROM `pro_jor_sub21_A22` ORDER BY ID DESC LIMIT 30;");
@@ -34,8 +36,9 @@ router.get('/sub21', async (req, res, next) => {
     let logo_liga = "logochampions.png"
     let fondo = 'url("/images/fondochampions.jpg")';
     let color = 'rgb(233 202 107)'
+    let jornada = "Semana"
 
-    res.render('resul/resul', {resul,categoria,Liga,logo_liga,fondo,color});
+    res.render('resul/resul', {resul,categoria,Liga,logo_liga,fondo,color,jornada});
 });
 
 router.get('/mixto', async (req, res, next) => {
@@ -46,8 +49,9 @@ router.get('/mixto', async (req, res, next) => {
     let logo_liga = "logochampions.png"
     let fondo = 'url("/images/fondochampions.jpg")';
     let color = 'rgb(213 189 255)'
+    let jornada = "Semana"
 
-    res.render('resul/resul', {resul,categoria,Liga,logo_liga,fondo,color});
+    res.render('resul/resul', {resul,categoria,Liga,logo_liga,fondo,color,jornada});
 });
 
 module.exports = router;

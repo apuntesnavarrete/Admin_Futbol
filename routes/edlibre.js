@@ -135,7 +135,7 @@ await pool.query("INSERT INTO Libre_A2022_ED set ?",[Resul_2])
 //Insertar tabla general
 
 
-res.redirect('/')
+res.redirect('http://localhost:8081/resul/ed/libre')
 })
 
 module.exports = router;
