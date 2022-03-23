@@ -18,6 +18,7 @@ var pmixRouter = require('./routes/pmix');
 var resulpro = require('./routes/resul/pro')
 var resuled = require('./routes/resul/ed')
 var resulgem = require('./routes/resul/gem')
+const generalPro = require('./routes/Tablageneral/pro')
 
 
 var app = express();
@@ -46,7 +47,7 @@ app.use('/ed/pfemenil', pfRouter);
 app.use('/resul/pro',resulpro)
 app.use('/resul/ed',resuled)
 app.use('/resul/gemelas',resulgem)
-
+app.use('/general/pro',generalPro)
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
