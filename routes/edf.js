@@ -5,7 +5,7 @@ const pool = require('../database');
 /* GET users listing. */
 /* GET home page. */
 router.get('/', async (req, res, next) => {
-  const vistas = await pool.query("SELECT * FROM `ED_general_femenil_c21`");
+  const vistas = await pool.query("SELECT * FROM `Ed_femenil_A2022_V`");
 
 console.log(vistas)
 let categoria = "femenil";
@@ -22,8 +22,8 @@ router.post('/', async (req, res, next) => {
   var {equipo_2} = req.body
 console.log(equipo)
 console.log(equipo_2)
-const plantel_1 = await pool.query("Select * From `ed_planteles_femenil_a2021` WHERE Nombre_Equipo = ?" , [equipo])
-const plantel_2 = await pool.query("Select * From `ed_planteles_femenil_a2021` WHERE Nombre_Equipo = ?" , [equipo_2])
+const plantel_1 = await pool.query("Select * From `ed_planteles_femenil_a2022` WHERE Nombre_Equipo = ?" , [equipo])
+const plantel_2 = await pool.query("Select * From `ed_planteles_femenil_a2022` WHERE Nombre_Equipo = ?" , [equipo_2])
 
 console.log(plantel_1)
 console.log(plantel_2)
@@ -95,47 +95,47 @@ console.log(Resul_1)
 //Insertar goles y partidos de jugadores
 //Primer Equipo
 
-await pool.query("INSERT INTO Goleo_ED_feme_c21 set ?",[jugador_0])
-await pool.query("INSERT INTO Goleo_ED_feme_c21 set ?",[jugador_1])
-await pool.query("INSERT INTO Goleo_ED_feme_c21 set ?",[jugador_2])
-await pool.query("INSERT INTO Goleo_ED_feme_c21 set ?",[jugador_3])
-await pool.query("INSERT INTO Goleo_ED_feme_c21 set ?",[jugador_4])
-await pool.query("INSERT INTO Goleo_ED_feme_c21 set ?",[jugador_5])
-await pool.query("INSERT INTO Goleo_ED_feme_c21 set ?",[jugador_6])
-await pool.query("INSERT INTO Goleo_ED_feme_c21 set ?",[jugador_7])
-await pool.query("INSERT INTO Goleo_ED_feme_c21 set ?",[jugador_8])
-await pool.query("INSERT INTO Goleo_ED_feme_c21 set ?",[jugador_9])
-await pool.query("INSERT INTO Goleo_ED_feme_c21 set ?",[jugador_10])
-await pool.query("INSERT INTO Goleo_ED_feme_c21 set ?",[jugador_11])
-await pool.query("INSERT INTO Goleo_ED_feme_c21 set ?",[jugador_12])
-await pool.query("INSERT INTO Goleo_ED_feme_c21 set ?",[jugador_13])
-await pool.query("INSERT INTO Goleo_ED_feme_c21 set ?",[jugador_14])
+await pool.query("INSERT INTO Goleo_ED_feme_A22 set ?",[jugador_0])
+await pool.query("INSERT INTO Goleo_ED_feme_A22 set ?",[jugador_1])
+await pool.query("INSERT INTO Goleo_ED_feme_A22 set ?",[jugador_2])
+await pool.query("INSERT INTO Goleo_ED_feme_A22 set ?",[jugador_3])
+await pool.query("INSERT INTO Goleo_ED_feme_A22 set ?",[jugador_4])
+await pool.query("INSERT INTO Goleo_ED_feme_A22 set ?",[jugador_5])
+await pool.query("INSERT INTO Goleo_ED_feme_A22 set ?",[jugador_6])
+await pool.query("INSERT INTO Goleo_ED_feme_A22 set ?",[jugador_7])
+await pool.query("INSERT INTO Goleo_ED_feme_A22 set ?",[jugador_8])
+await pool.query("INSERT INTO Goleo_ED_feme_A22 set ?",[jugador_9])
+await pool.query("INSERT INTO Goleo_ED_feme_A22 set ?",[jugador_10])
+await pool.query("INSERT INTO Goleo_ED_feme_A22 set ?",[jugador_11])
+await pool.query("INSERT INTO Goleo_ED_feme_A22 set ?",[jugador_12])
+await pool.query("INSERT INTO Goleo_ED_feme_A22 set ?",[jugador_13])
+await pool.query("INSERT INTO Goleo_ED_feme_A22 set ?",[jugador_14])
 //Segundo Equipo
-await pool.query("INSERT INTO Goleo_ED_feme_c21 set ?",[jugador2_0])
-await pool.query("INSERT INTO Goleo_ED_feme_c21 set ?",[jugador2_1])
-await pool.query("INSERT INTO Goleo_ED_feme_c21 set ?",[jugador2_2])
-await pool.query("INSERT INTO Goleo_ED_feme_c21 set ?",[jugador2_3])
-await pool.query("INSERT INTO Goleo_ED_feme_c21 set ?",[jugador2_4])
-await pool.query("INSERT INTO Goleo_ED_feme_c21 set ?",[jugador2_5])
-await pool.query("INSERT INTO Goleo_ED_feme_c21 set ?",[jugador2_6])
-await pool.query("INSERT INTO Goleo_ED_feme_c21 set ?",[jugador2_7])
-await pool.query("INSERT INTO Goleo_ED_feme_c21 set ?",[jugador2_8])
-await pool.query("INSERT INTO Goleo_ED_feme_c21 set ?",[jugador2_9])
-await pool.query("INSERT INTO Goleo_ED_feme_c21 set ?",[jugador2_10])
-await pool.query("INSERT INTO Goleo_ED_feme_c21 set ?",[jugador2_11])
-await pool.query("INSERT INTO Goleo_ED_feme_c21 set ?",[jugador2_12])
-await pool.query("INSERT INTO Goleo_ED_feme_c21 set ?",[jugador2_13])
-await pool.query("INSERT INTO Goleo_ED_feme_c21 set ?",[jugador2_14])
+await pool.query("INSERT INTO Goleo_ED_feme_A22 set ?",[jugador2_0])
+await pool.query("INSERT INTO Goleo_ED_feme_A22 set ?",[jugador2_1])
+await pool.query("INSERT INTO Goleo_ED_feme_A22 set ?",[jugador2_2])
+await pool.query("INSERT INTO Goleo_ED_feme_A22 set ?",[jugador2_3])
+await pool.query("INSERT INTO Goleo_ED_feme_A22 set ?",[jugador2_4])
+await pool.query("INSERT INTO Goleo_ED_feme_A22 set ?",[jugador2_5])
+await pool.query("INSERT INTO Goleo_ED_feme_A22 set ?",[jugador2_6])
+await pool.query("INSERT INTO Goleo_ED_feme_A22 set ?",[jugador2_7])
+await pool.query("INSERT INTO Goleo_ED_feme_A22 set ?",[jugador2_8])
+await pool.query("INSERT INTO Goleo_ED_feme_A22 set ?",[jugador2_9])
+await pool.query("INSERT INTO Goleo_ED_feme_A22 set ?",[jugador2_10])
+await pool.query("INSERT INTO Goleo_ED_feme_A22 set ?",[jugador2_11])
+await pool.query("INSERT INTO Goleo_ED_feme_A22 set ?",[jugador2_12])
+await pool.query("INSERT INTO Goleo_ED_feme_A22 set ?",[jugador2_13])
+await pool.query("INSERT INTO Goleo_ED_feme_A22 set ?",[jugador2_14])
 //Termina Insertar goles y partidos de jugadores
-await pool.query("INSERT INTO ED_Femenil_2021_Clausura_i set ?",[Resul_1])
-await pool.query("INSERT INTO ED_Femenil_2021_Clausura_i set ?",[Resul_2])
+await pool.query("INSERT INTO ED_Femenil_A2022_i set ?",[Resul_1])
+await pool.query("INSERT INTO ED_Femenil_A2022_i set ?",[Resul_2])
 
 
 
 //Insertar tabla general
 
 
-res.redirect('/')
+res.redirect('http://localhost:8081/resul/ed/femenil')
 })
 
 module.exports = router;
