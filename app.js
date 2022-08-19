@@ -15,10 +15,22 @@ var psubRouter = require('./routes/psub');
 var plibreRouter = require('./routes/plibre');
 var pfRouter = require('./routes/pf');
 var pmixRouter = require('./routes/pmix');
+
+var aguijuveRouter = require('./routes/Aguisub')
+//Rutas resultados inicio
 var resulpro = require('./routes/resul/pro')
 var resuled = require('./routes/resul/ed')
 var resulgem = require('./routes/resul/gem')
+var resulAgui = require('./routes/resul/agui')
+//Rutas resultados final.
+
+var plantelPro = require('./routes/planteles/pro')
+
+//Rutas tablas generales inicio
 const generalPro = require('./routes/Tablageneral/pro')
+const generalagui = require('./routes/Tablageneral/agui')
+
+//Rutas Tablas generales Final
 
 
 var app = express();
@@ -44,10 +56,23 @@ app.use('/ed/plibre', plibreRouter);
 app.use('/ed/pmix', pmixRouter);
 app.use('/ed/psub', psubRouter);
 app.use('/ed/pfemenil', pfRouter);
+app.use('/ed/Asub21', aguijuveRouter);
+
+//Inicio rutas Resultados
 app.use('/resul/pro',resulpro)
 app.use('/resul/ed',resuled)
 app.use('/resul/gemelas',resulgem)
+app.use('/resul/agui',resulAgui);
+//Fin rutas resultados
+
+//Inicio rutas tabla general
 app.use('/general/pro',generalPro)
+app.use('/general/agui',generalagui)
+//Final rutas generales
+
+//Tablas de planteles
+app.use('/planteles/pro',plantelPro)
+
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

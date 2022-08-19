@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel='stylesheet' href='/stylesheets/generalagui.css' />
+  <title>Document</title>
+</head>
+<body>
+  <div class="L_general_contenedor">
+
+    <div class="L_tabla_cabezera">
+      <h2>AGUIGOL    <%- categoria %>  </h2>
+
+    </div>  
+
+
+    <div id="cabezera" class="parent">
+      <div></div>
+      <div></div>
+      <div></div>
+      <div>PTS</div>
+      <div>GF</div>
+      <div>GC</div>
+      <div>DFG</div>
+      <div>PJ</div>
+      <div>PG</div>
+      <div>PP</div>
+      <div>PGP</div>
+      <div>PPP</div>
+
+
+
+
+    </div>
+
+        <% for(var i=0 ; i < vistas.length; i++) { %>
+          
+          <div class="parent">
+            <div id="parent_ind">  <%- i+1 %> </div>
+            <div>  
+         <img src="<%- vistas[i].Escudo %>" width="40px" height="40px"></img>
+        </div>
+        <div id="parent_ind">    <%- vistas[i].Equipo %></div>
+        <div id="parent_ind">   <%- vistas[i].Puntos %></div>
+          <div id="parent_ind">  <%- vistas[i].GF %></div>
+            <div id="parent_ind">  <%- vistas[i].GC %></div>
+              <div id="parent_ind">  <%- vistas[i].DFG %></div>
+                <div id="parent_ind">  <%- vistas[i].PJ %></div>
+                <div id="parent_ind"><%- vistas_ganados[i] %>  </div>
+                <div id="parent_ind"> <%- vistas_Perdidos[i] %></div>
+                <div id="parent_ind"> <%- vistas_ganadospenales[i] %> </div>
+                <div id="parent_ind"> <%- vistas_Perdidospenales[i] %> </div>
+
+
+        </div>
+                    <% } %>
+    
+                    <div id="cabezera" class="parent">
+                      <div></div>
+                      <div></div>
+                      <div></div>
+                      <div>PTS</div>
+                      <div>GF</div>
+                      <div>GC</div>
+                      <div>DFG</div>
+                      <div>PJ</div>
+                      <div>PG</div>
+                      <div>PP</div>
+                      <div>PGP</div>
+                      <div>PPP</div>
+                    </div>                    
+                    <h2>AGUIGOL     <%- categoria %>  </h2>
+
+
+  </div>
+
+</body>
+</html>

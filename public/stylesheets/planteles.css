@@ -1,0 +1,30 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    
+}
+.card_container{
+    width: 300px;
+    display: inline-block;
+    margin: 10px;
+    border: 1px solid;
+    border-radius: 5px;
+}
+.card_interna{
+    display: flex;
+    align-items: center;
+
+}
+.card_perfil{
+    width: 140px;
+    height: 150px;
+    object-fit: cover;
+}
+.card_data{
+    margin: 5px;
+
+}

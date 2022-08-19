@@ -5,10 +5,10 @@ const pool = require('../database');
 /* GET users listing. */
 /* GET home page. */
 router.get('/', async (req, res, next) => {
-  const vistas = await pool.query("SELECT * FROM `G_general_SUB22_A22`");
+  const vistas = await pool.query("SELECT * FROM `agui_general_sub22_c22`");
 
 console.log(vistas)
-let categoria = "gsub";
+let categoria = "Asub21";
 console.log(categoria)
 
   res.render('index', {vistas:vistas,categoria});
@@ -16,13 +16,13 @@ console.log(categoria)
 });
 
 router.post('/', async (req, res, next) => {
-  let categoria = "gsub";
+  let categoria = "Asub21";
   var {equipo} = req.body
   var {equipo_2} = req.body
 console.log(equipo)
 console.log(equipo_2)
-const plantel_1 = await pool.query("SELECT * FROM `G_general_SUB22_A22` WHERE Equipo = ?",[equipo]);
-const plantel_2 = await pool.query("SELECT * FROM `G_general_SUB22_A22` WHERE Equipo = ?",[equipo_2]);
+const plantel_1 = await pool.query("SELECT * FROM `agui_general_sub22_c22` WHERE Equipo = ?",[equipo]);
+const plantel_2 = await pool.query("SELECT * FROM `agui_general_sub22_c22` WHERE Equipo = ?",[equipo_2]);
 
 // const plantel_1 = await pool.query("Select * From `ed_planteles_libre_a22` WHERE Nombre_Equipo = ?" , [equipo])
 // const plantel_2 = await pool.query("Select * From `ed_planteles_libre_a22` WHERE Nombre_Equipo = ?" , [equipo_2])
@@ -33,7 +33,7 @@ const plantel_2 = await pool.query("SELECT * FROM `G_general_SUB22_A22` WHERE Eq
   res.render('gpost', {categoria,equipo,equipo_2,plantel_1,plantel_2});
 });
 
-router.post('/actgsub' , async (req,res,next)=>{
+router.post('/actAsub21' , async (req,res,next)=>{
 // let {id,Goles,PJ} = req.body;
 // let {id_2,Goles_2,PJ_2} = req.body;
 let {Equipo,Equipo_2,GF,GC,Jornada,Fecha,Puntos,Puntos_2} = req.body;
@@ -129,16 +129,15 @@ console.log(Resul_1)
 // await pool.query("INSERT INTO Goleo_ED_feme_c21 set ?",[jugador2_13])
 // await pool.query("INSERT INTO Goleo_ED_feme_c21 set ?",[jugador2_14])
 //Termina Insertar goles y partidos de jugadores
-await pool.query("INSERT INTO G_Sub22_A22 set ?",[Resul_1])
-await pool.query("INSERT INTO G_Sub22_A22 set ?",[Resul_2])
+await pool.query("INSERT INTO agui_sub22_c22 set ?",[Resul_1])
+await pool.query("INSERT INTO agui_sub22_c22 set ?",[Resul_2])
 
 
 
 //Insertar tabla general
 
 
-res.redirect('http://localhost:8081/resul/gemelas/sub21')
+res.redirect('http://localhost:8081/resul/agui/sub22')
 })
 
 module.exports = router;
-

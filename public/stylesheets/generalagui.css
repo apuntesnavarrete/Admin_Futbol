@@ -1,0 +1,63 @@
+body {
+    padding: 50px;
+   /* font: 14px "Lucida Grande", Helvetica, Arial, sans-serif; */
+  background-color: #edf0ec;
+  letter-spacing: 1px
+
+  }
+
+  h2{
+    margin-bottom: 0.5rem;
+    font-family: inherit;
+    font-weight: 500;
+    line-height: 1.2;
+    color: inherit;
+  }
+  .L_general_contenedor{
+    border: 1px solid #000;
+    width: 775px;
+    padding: 51px;
+  text-align:center;
+  background-image: url("/images/fondoaguigol.png");
+  background-size: 100% 100%;
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  font: 25px impact ;
+  color: #dffde0;
+  text-align: center;
+  
+  text-shadow: -1px -1px 1px rgba(0,0,0,1) , 1px 1px 0 rgba(0,0,0,1) , 0 0 20px rgba(4,4,5,1) ;
+  
+  
+  }
+
+
+.parent {
+    margin: 15px 0px;
+    display: grid;
+  grid-template-columns: repeat(2, 1fr) 3fr repeat(9, 1fr);
+  grid-template-rows: 1fr;
+  grid-gap: 1px;
+  
+    }
+
+    #cabezera{
+        color: #607d8b;
+        font: normal 30px/1 Impact, Charcoal, sans-serif;
+      }
+
+      .parent > div {
+        background-color: rgba(8, 9, 10, 0.563);
+        border: 1px solid #000;
+      }
+
+      #parent_ind{
+        padding-top: 10px;
+        /* cambiar centrado */ 
+       }
+
+       .L_tabla_cabezera{
+        color: #e0b91a;
+      margin-top: 30px;
+       }

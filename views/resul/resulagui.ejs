@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+        <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel='stylesheet' href='/stylesheets/resulagui.css' />
+    
+
+    <title>Document</title>
+</head>
+<body>
+    
+    <% for(var i=0 ; i < resul.length; i++) { %>
+
+    <div class="content_resul">
+        <p class="fecha"><%- resul[i].Fecha %></p>
+        
+        <p class="Cat">Categoria <%- categoria %></p>
+        <p class="Jor">    <%- jornada %> <%- resul[i].Jornada %></p>
+        <div class="equipo_1">
+            <img class="equipos" src="<%- resul[i].Escudo %>" alt="">
+        </div> 
+        <p class="versus"></p>
+        <div class="Equipo_2">
+            <img class="equipos" src="<%- resul[i].Escudolc %>" alt="">
+        </div>       
+        <p class="marcador"><%- resul[i].GC %> - <%- resul[i].GF %></p>
+        <p class="Logo">
+            <img class="logo-img" src="/images/<%- logo_liga %>" alt="">
+        </p>
+        <p class="liga"><%- Liga %></p>
+    </div>
+    <% } %>
+    <%- fondo %>
+
+<script>
+    window.onload=inicio;
+    function inicio(){
+
+
+        
+
+        for (let i = 0; i < 30; i++) {
+         document.getElementsByClassName("content_resul")[i].style.borderColor = '<%- color %>';
+         document.getElementsByClassName("content_resul")[i].style.color = '<%- color %>';
+         document.getElementsByClassName("content_resul")[i].style.backgroundImage = '<%- fondo %>';
+
+        }
+
+
+
+    }
+</script>
+    <p>Resultados Libre vista</p>
+</body>
+</html>

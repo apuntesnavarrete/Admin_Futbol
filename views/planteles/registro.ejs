@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel='stylesheet' href='/stylesheets/planteles.css' />
+
+  <title>Document</title>
+</head>
+<body>
+
+    <% for(var i=0 ; i < plantel.length; i++) { %>
+     <div class="card_container">
+        <div class="card_interna">
+          <img src="<%- plantel[i].Foto %>" class="card_perfil"> </img>
+          <div class="card_data">
+            <h5 class="card_plante-id">Id.-<%- plantel[i].ID_FB %></h5> 
+               <h4 class="card_nombre"><%- plantel[i].Nombres %></h5>
+               <h5 class="card_escudo"><img src="<%- plantel[i].Escudo %>" width="40px" height="40px" class="img-thumbnail"></img><%- plantel[i].Nombre_Equipo %></h5>
+               <p class="card_Torneo">Torneo <%- plantel[i].Torneo %></p>
+               <p class="card_Dorsal">Dorsal .- <%- plantel[i].Dorsal %></p>
+               <div class="card-liga">
+                Pro Champions League</div>
+          </div>
+
+        </div>
+    
+          
+     </div>
+              
+  <% } %>
+  
+  
+</body>
+</html>
+

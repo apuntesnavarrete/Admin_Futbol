@@ -5,8 +5,8 @@ const pool = require('../../database');
 
 
 router.get('/libre', async(req, res, next)=> {
-    const vistas = await pool.query("SELECT * FROM `PRO_general_libre_c21`");
-    const categoria = 'Libre C2021'
+    const vistas = await pool.query("SELECT * FROM `pro_general_libre_A22`");
+    const categoria = 'Libre A2022'
   
     res.render('tablas/general.ejs',{vistas,categoria})
   });
@@ -19,8 +19,8 @@ router.get('/libre', async(req, res, next)=> {
     res.render('tablas/general.ejs',{vistas,categoria})
   });
   router.get('/Sub21', async(req, res, next)=> {
-    const vistas = await pool.query("SELECT * FROM `pro_general_sub21_a22`");
-    const categoria = 'Sub-21 A2022'
+    const vistas = await pool.query("SELECT * FROM `pro_general_sub22_c22`");
+    const categoria = 'Sub-22 A2022'
   
     res.render('tablas/general.ejs',{vistas,categoria})
   });

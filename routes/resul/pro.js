@@ -4,7 +4,7 @@ const pool = require('../../database');
 
 
 router.get('/libre', async (req, res, next) => {
-    const resul = await pool.query("SELECT * FROM `pro_jor_libre_c21` ORDER BY ID DESC LIMIT 30;");
+    const resul = await pool.query("SELECT * FROM `pro_jor_libre_a22` ORDER BY ID DESC LIMIT 30;");
     console.log(resul)
     let categoria = "Libre"
     let Liga = "Pro Champions League"
@@ -29,7 +29,7 @@ router.get('/femenil', async (req, res, next) => {
     res.render('resul/resul', {resul,categoria,Liga,logo_liga,fondo,color,jornada});
 });
 router.get('/sub21', async (req, res, next) => {
-    const resul = await pool.query("SELECT * FROM `pro_jor_sub21_A22` ORDER BY ID DESC LIMIT 30;");
+    const resul = await pool.query("SELECT * FROM `pro_jor_sub22_c22` ORDER BY ID DESC LIMIT 30;");
     console.log(resul)
     let categoria = "Sub-21"
     let Liga = "Pro Champions League"

@@ -5,7 +5,7 @@ const pool = require('../database');
 /* GET users listing. */
 /* GET home page. */
 router.get('/', async (req, res, next) => {
-  const vistas = await pool.query("SELECT * FROM `PRO_general_libre_c21`");
+  const vistas = await pool.query("SELECT * FROM `pro_general_libre_A22`");
 
 console.log(vistas)
 let categoria = "plibre";
@@ -21,8 +21,8 @@ router.post('/', async (req, res, next) => {
   var {equipo_2} = req.body
 console.log(equipo)
 console.log(equipo_2)
-const plantel_1 = await pool.query("SELECT * FROM `PRO_general_libre_c21` WHERE Equipo = ?",[equipo]);
-const plantel_2 = await pool.query("SELECT * FROM `PRO_general_libre_c21` WHERE Equipo = ?",[equipo_2]);
+const plantel_1 = await pool.query("SELECT * FROM `pro_general_libre_A22` WHERE Equipo = ?",[equipo]);
+const plantel_2 = await pool.query("SELECT * FROM `pro_general_libre_A22` WHERE Equipo = ?",[equipo_2]);
 // const plantel_1 = await pool.query("Select * From `ed_planteles_libre_a22` WHERE Nombre_Equipo = ?" , [equipo])
 // const plantel_2 = await pool.query("Select * From `ed_planteles_libre_a22` WHERE Nombre_Equipo = ?" , [equipo_2])
 
@@ -128,8 +128,8 @@ console.log(Resul_1)
 // await pool.query("INSERT INTO Goleo_ED_feme_c21 set ?",[jugador2_13])
 // await pool.query("INSERT INTO Goleo_ED_feme_c21 set ?",[jugador2_14])
 //Termina Insertar goles y partidos de jugadores
-await pool.query("INSERT INTO Pro_Libre_c21 set ?",[Resul_1])
-await pool.query("INSERT INTO Pro_Libre_c21 set ?",[Resul_2])
+await pool.query("INSERT INTO Pro_Libre_A22 set ?",[Resul_1])
+await pool.query("INSERT INTO Pro_Libre_A22 set ?",[Resul_2])
 
 
 
