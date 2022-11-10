@@ -16,7 +16,7 @@ router.get('/Mixta', async (req, res, next) => {
 
 
 router.get('/Libre', async (req, res, next) => {
-    const resul = await pool.query("SELECT * FROM `ed_jor_libre_a22` ORDER BY ID DESC LIMIT 30;");
+    const resul = await pool.query("SELECT * FROM `ed_jor_libre_c2022` ORDER BY ID DESC LIMIT 30;");
     console.log(resul)
     let categoria = "Libre"
     let Liga = "Liga ED"

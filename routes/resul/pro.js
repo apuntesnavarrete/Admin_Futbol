@@ -17,7 +17,7 @@ router.get('/libre', async (req, res, next) => {
 });
 
 router.get('/femenil', async (req, res, next) => {
-    const resul = await pool.query("SELECT * FROM `pro_jor_femenil_A22` ORDER BY ID DESC LIMIT 30;");
+    const resul = await pool.query("SELECT * FROM `pro_jor_femenil_c22` ORDER BY ID DESC LIMIT 30;");
     console.log(resul)
     let categoria = "femenil"
     let Liga = "Pro Champions League"
@@ -41,8 +41,22 @@ router.get('/sub21', async (req, res, next) => {
     res.render('resul/resul', {resul,categoria,Liga,logo_liga,fondo,color,jornada});
 });
 
+router.get('/sub18', async (req, res, next) => {
+    const resul = await pool.query("SELECT * FROM `pro_jor_sub18_c22` ORDER BY ID DESC LIMIT 30;");
+    console.log(resul)
+    let categoria = "Sub-18"
+    let Liga = "Pro Champions League"
+    let logo_liga = "logochampions.png"
+    let fondo = 'url("/images/fondochampions.jpg")';
+    let color = 'rgb(198 106 86)'
+    let jornada = "Semana"
+
+    res.render('resul/resul', {resul,categoria,Liga,logo_liga,fondo,color,jornada});
+});
+
+
 router.get('/mixto', async (req, res, next) => {
-    const resul = await pool.query("SELECT * FROM `pro_jor_mix_A22` ORDER BY ID DESC LIMIT 30;");
+    const resul = await pool.query("SELECT * FROM `pro_jor_mix_c22` ORDER BY ID DESC LIMIT 30;");
     console.log(resul)
     let categoria = "Mixta"
     let Liga = "Pro Champions League"

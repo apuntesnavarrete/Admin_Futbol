@@ -29,6 +29,8 @@ var plantelPro = require('./routes/planteles/pro')
 //Rutas tablas generales inicio
 const generalPro = require('./routes/Tablageneral/pro')
 const generalagui = require('./routes/Tablageneral/agui')
+const generalED = require('./routes/Tablageneral/ligaed')
+const generalgem = require('./routes/Tablageneral/gem')
 
 //Rutas Tablas generales Final
 
@@ -68,6 +70,9 @@ app.use('/resul/agui',resulAgui);
 //Inicio rutas tabla general
 app.use('/general/pro',generalPro)
 app.use('/general/agui',generalagui)
+app.use('/general/ed',generalED)
+app.use('/general/gem',generalgem)
+
 //Final rutas generales
 
 //Tablas de planteles

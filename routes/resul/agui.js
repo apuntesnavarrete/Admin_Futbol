@@ -16,16 +16,16 @@ router.get('/Mixta', async (req, res, next) => {
 
 
 router.get('/Libre', async (req, res, next) => {
-    const resul = await pool.query("SELECT * FROM `ed_jor_libre_a22` ORDER BY ID DESC LIMIT 30;");
+    const resul = await pool.query("SELECT * FROM `agui_jor_libre_c2022` ORDER BY ID DESC LIMIT 30;");
     console.log(resul)
     let categoria = "Libre"
     let Liga = "Aguigol"
-    let logo_liga = "logoed.png"
-    let fondo = 'url("/images/fondoligaed.jpg")';
+    let logo_liga = "aguigol.png"
+    let fondo = 'url("/images/fondoaguigol.png")';
     let color = 'rgb(197 245 141)'
-    let jornada = "Jornada"
+    let jornada = "Semana"
 
-    res.render('resul/resul', {resul,categoria,Liga,logo_liga,fondo,color,jornada});
+    res.render('resul/resulagui', {resul,categoria,Liga,logo_liga,fondo,color,jornada});
 });
 
 router.get('/Sub22', async (req, res, next) => {

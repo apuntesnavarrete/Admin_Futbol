@@ -15,10 +15,10 @@ router.get('/sub19', async (req, res, next) => {
 });
 
 
-router.get('/sub21', async (req, res, next) => {
-    const resul = await pool.query("SELECT * FROM `gem_jor_sub22_A22` ORDER BY ID DESC LIMIT 30;");
+router.get('/libre', async (req, res, next) => {
+    const resul = await pool.query("SELECT * FROM `g_jor_libre_c2022` ORDER BY ID DESC LIMIT 30;");
     console.log(resul)
-    let categoria = "Sub-22"
+    let categoria = "Libre"
     let Liga = "Liga Gemelas"
     let logo_liga = "logogemelas.png"
     let fondo = 'url("/images/fondogemelas.png")';
@@ -29,7 +29,7 @@ router.get('/sub21', async (req, res, next) => {
 });
 
 router.get('/mixto', async (req, res, next) => {
-    const resul = await pool.query("SELECT * FROM `gem_jor_mix_a22` ORDER BY ID DESC LIMIT 30;");
+    const resul = await pool.query("SELECT * FROM `g_jor_mix_c2022` ORDER BY ID DESC LIMIT 30;");
     console.log(resul)
     let categoria = "Mixta"
     let Liga = "Liga Gemelas"
