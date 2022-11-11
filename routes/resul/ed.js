@@ -29,7 +29,7 @@ router.get('/Libre', async (req, res, next) => {
 });
 
 router.get('/Femenil', async (req, res, next) => {
-    const resul = await pool.query("SELECT * FROM `ed_jor_femenil_A22` ORDER BY ID DESC LIMIT 30;");
+    const resul = await pool.query("SELECT * FROM `ed_jor_fem_c22` ORDER BY ID DESC LIMIT 30;");
     console.log(resul)
     let categoria = "Femenil"
     let Liga = "Liga ED"
