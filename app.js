@@ -17,6 +17,8 @@ var pfRouter = require('./routes/pf');
 var pmixRouter = require('./routes/pmix');
 
 var aguijuveRouter = require('./routes/Aguisub')
+var aguilibreRouter = require('./routes/Aguilibre')
+
 //Rutas resultados inicio
 var resulpro = require('./routes/resul/pro')
 var resuled = require('./routes/resul/ed')
@@ -59,6 +61,7 @@ app.use('/ed/pmix', pmixRouter);
 app.use('/ed/psub', psubRouter);
 app.use('/ed/pfemenil', pfRouter);
 app.use('/ed/Asub21', aguijuveRouter);
+app.use('/ed/Alibre', aguilibreRouter);
 
 //Inicio rutas Resultados
 app.use('/resul/pro',resulpro)
