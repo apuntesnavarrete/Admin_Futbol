@@ -16,7 +16,7 @@ console.log(categoria)
 });
 
 router.post('/', async (req, res, next) => {
-  let categoria = "Fem";
+  let categoria = "fem";
   var {equipo} = req.body
   var {equipo_2} = req.body
 console.log(equipo)
