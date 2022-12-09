@@ -5,7 +5,7 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 
 var indexRouter = require('./routes/index');
-var edfRouter = require('./routes/edf');
+var edfRouter = require('./routes/edfem');
 var edmRouter = require('./routes/edm');
 var edlibreRouter = require('./routes/edlibre');
 var gemmixRouter = require('./routes/gemmix');
@@ -50,7 +50,7 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
-app.use('/ed/femenil', edfRouter);
+app.use('/ed/fem', edfRouter);
 app.use('/ed/mixta', edmRouter);
 app.use('/ed/libre', edlibreRouter);
 app.use('/ed/gmix', gemmixRouter);

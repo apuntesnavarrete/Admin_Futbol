@@ -8,7 +8,7 @@ router.get('/', async (req, res, next) => {
   const vistas = await pool.query("SELECT * FROM `ed_general_fem_c22`");
 
 console.log(vistas)
-let categoria = "Femenil";
+let categoria = "fem";
 console.log(categoria)
 
   res.render('index', {vistas:vistas,categoria});
@@ -137,7 +137,7 @@ await pool.query("INSERT INTO ed_femenil_c2022 set ?",[Resul_2])
 //Insertar tabla general
 
 
-res.redirect('http://localhost:8081/resul/ed/fem')
+res.redirect('http://localhost:8081/resul/ed/femenil')
 })
 
 module.exports = router;
